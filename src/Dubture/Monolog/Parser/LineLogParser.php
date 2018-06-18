@@ -74,7 +74,7 @@ class LineLogParser implements LogParserInterface
     }
 
     krsort($jsons);
-    $messageEndPos = count($jsons);
+    $messageEndPos = max(array_keys($jsons));
     $keys = array("extra", "context");
     $i = 0;
     foreach ($jsons as $pos => $value) {
